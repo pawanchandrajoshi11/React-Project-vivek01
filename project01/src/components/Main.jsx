@@ -18,7 +18,7 @@ const Main = () => {
   };
 
   const handleNumberChange = (e) => {
-    let targetNumber = e.target.value.replace(/\D/g, "");
+    let targetNumber = e.target.value.replace(/\D/, "");
     if (targetNumber[0] === "0") {
       return;
     }
