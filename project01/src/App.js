@@ -1,13 +1,12 @@
 // import './App.css';
-import Left from './components/Left';
-import Right from './components/Right';
+import React from 'react';
+import Main from "./components/Main";
 
 
 function App() {
   return (
     <div className="App">
-      <Left />
-      <Right/>
+      <Main />
     </div>
   );
 }
