@@ -4,11 +4,14 @@ const Left = ({
   name,
   email,
   number,
+  checkBox,
   handleNameChange,
   handleEmailChange,
   handleNumberChange,
+  handleCheckBox,
   handleSubmit,
 }) => {
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -37,8 +40,20 @@ const Left = ({
           required
         />
       </div>
+      
+      <div>
+        <label htmlFor="checkbox">True to my knowledge: </label>
+        <input
+          type="checkbox"
+          name="checkbox"
+          value={checkBox}
+          onChange={handleCheckBox}
+          required
+          
+        />
+      </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" id="submit-btn" disabled={!checkBox}>Submit</button>
     </form>
   );
 };
